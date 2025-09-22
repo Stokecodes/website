@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Debris Tracking - Aerospace Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                        background: '#0f172a',
+                        foreground: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Mobile Navigation -->
+    <nav class="fixed top-0 right-0 z-50 p-4">
+        <button id="menu-toggle" class="text-white bg-primary/20 backdrop-blur-sm rounded-lg p-3 hover:bg-primary/30 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-background/95 backdrop-blur-sm">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <button id="close-menu" class="absolute top-4 right-4 text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="index.html" class="text-white hover:text-accent transition-colors">Home</a>
+                <a href="projects.html" class="text-primary hover:text-accent transition-colors">Projects</a>
+                <a href="about.html" class="text-white hover:text-accent transition-colors">About</a>
+                <a href="resume.html" class="text-white hover:text-accent transition-colors">Resume</a>
+                <a href="contact.html" class="text-white hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="pt-20 pb-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-6">
+                <a href="projects.html" class="inline-flex items-center text-primary hover:text-accent transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Back to Projects
+                </a>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary text-balance">Satellite Debris Tracking</h1>
+            <p class="text-xl text-gray-300 mb-8 text-pretty">Real-time space debris monitoring system using radar and optical sensors</p>
+            
+            <img src="public/satellite-orbiting-earth-with-space-debris.jpg" alt="Satellite Debris Tracking" class="w-full h-64 md:h-96 object-cover rounded-lg shadow-2xl mb-8">
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Project Overview</h2>
+                        <p class="text-gray-300 mb-4 text-pretty">
+                            Developed an advanced space debris tracking system capable of monitoring over 34,000 objects 
+                            in Earth's orbit in real-time. The system combines radar and optical sensor data to provide 
+                            accurate trajectory predictions and collision warnings for active satellites.
+                        </p>
+                        <p class="text-gray-300 text-pretty">
+                            This critical infrastructure helps protect billions of dollars in space assets and ensures 
+                            the safety of crewed missions by providing early warning of potential collisions with 
+                            space debris ranging from defunct satellites to paint flecks.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Technical Implementation</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-accent mb-2">Multi-Sensor Fusion</h3>
+                                <p class="text-gray-300 text-sm text-pretty">
+                                    Integrated ground-based radar systems with optical telescopes to achieve 
+                                    comprehensive coverage and improved tracking accuracy for objects as small as 1cm.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-accent mb-2">Orbital Mechanics Modeling</h3>
+                                <p class="text-gray-300 text-sm text-pretty">
+                                    Implemented sophisticated orbital propagation algorithms accounting for atmospheric 
+                                    drag, solar radiation pressure, and gravitational perturbations for precise predictions.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-accent mb-2">Real-Time Processing</h3>
+                                <p class="text-gray-300 text-sm text-pretty">
+                                    Developed high-performance computing pipeline capable of processing terabytes 
+                                    of sensor data daily and updating orbital elements in near real-time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Results & Impact</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-700/50 rounded-lg p-4">
+                                <h4 class="text-accent font-semibold mb-2">System Capabilities</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• Tracks 34,000+ objects</li>
+                                    <li>• 1cm minimum object size</li>
+                                    <li>• 99.7% tracking accuracy</li>
+                                    <li>• 24/7 continuous monitoring</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/50 rounded-lg p-4">
+                                <h4 class="text-accent font-semibold mb-2">Mission Impact</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• 15 collision warnings issued</li>
+                                    <li>• 3 satellite maneuvers guided</li>
+                                    <li>• $2B+ in assets protected</li>
+                                    <li>• Published in Nature journal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-6">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Project Details</h3>
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <span class="text-accent font-semibold">Duration:</span>
+                                <span class="text-gray-300 ml-2">12 months</span>
+                            </div>
+                            <div>
+                                <span class="text-accent font-semibold">Team Size:</span>
+                                <span class="text-gray-300 ml-2">6 members</span>
+                            </div>
+                            <div>
+                                <span class="text-accent font-semibold">Role:</span>
+                                <span class="text-gray-300 ml-2">Systems Engineer</span>
+                            </div>
+                            <div>
+                                <span class="text-accent font-semibold">Status:</span>
+                                <span class="text-gray-300 ml-2">Operational</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Technologies Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Machine Learning</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Orbital Mechanics</span>
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Radar Systems</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Data Fusion</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Real-time Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

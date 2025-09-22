@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Aerospace Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                        background: '#0f172a',
+                        foreground: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Mobile Navigation -->
+    <nav class="fixed top-0 right-0 z-50 p-4">
+        <button id="menu-toggle" class="text-white bg-primary/20 backdrop-blur-sm rounded-lg p-3 hover:bg-primary/30 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-background/95 backdrop-blur-sm">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <button id="close-menu" class="absolute top-4 right-4 text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="index.html" class="text-white hover:text-accent transition-colors">Home</a>
+                <a href="projects.html" class="text-primary hover:text-accent transition-colors">Projects</a>
+                <a href="about.html" class="text-white hover:text-accent transition-colors">About</a>
+                <a href="resume.html" class="text-white hover:text-accent transition-colors">Resume</a>
+                <a href="contact.html" class="text-white hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-20 pb-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary">My Projects</h1>
+            <p class="text-xl text-gray-300 text-pretty">Innovative aerospace engineering solutions and research</p>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <section class="py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="window.location.href='project-autonomous-drone-navigation.html'">
+                    <img src="public/autonomous-drone-flying-over-landscape.jpg" alt="Autonomous Drone Navigation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Autonomous Drone Navigation</h3>
+                        <p class="text-gray-300 text-sm mb-4">Advanced flight control system with computer vision and obstacle avoidance capabilities.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Computer Vision</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Flight Control</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/rocket-engine-test-firing-with-flames.jpg" alt="Rocket Engine Design" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Rocket Engine Design</h3>
+                        <p class="text-gray-300 text-sm mb-4">High-performance liquid fuel rocket engine with optimized combustion chamber design.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Propulsion</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">CFD Analysis</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Thermodynamics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/satellite-orbiting-earth-with-space-debris.jpg" alt="Satellite Debris Tracking" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Satellite Debris Tracking</h3>
+                        <p class="text-gray-300 text-sm mb-4">Real-time space debris monitoring system using radar and optical sensors.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Orbital Mechanics</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Radar Systems</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/wind-tunnel-testing-aircraft-model-with-airflow-vi.jpg" alt="Wind Tunnel Analysis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Wind Tunnel Analysis</h3>
+                        <p class="text-gray-300 text-sm mb-4">Comprehensive aerodynamic testing and flow visualization for aircraft design optimization.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Aerodynamics</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Flow Analysis</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/mars-rover-on-red-planet-surface-with-rocky-terrai.jpg" alt="Mars Rover Design" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Mars Rover Design</h3>
+                        <p class="text-gray-300 text-sm mb-4">Autonomous planetary exploration vehicle with advanced scientific instrumentation.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Robotics</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Planetary Science</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Autonomous Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/aircraft-wing-structural-analysis-with-stress-visu.jpg" alt="Aircraft Wing Analysis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Aircraft Wing Analysis</h3>
+                        <p class="text-gray-300 text-sm mb-4">Structural optimization and stress analysis for next-generation aircraft wing design.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Structural Analysis</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">FEA</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/hypersonic-vehicle-with-glowing-heat-shield-during.jpg" alt="Hypersonic Vehicle" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Hypersonic Vehicle</h3>
+                        <p class="text-gray-300 text-sm mb-4">Advanced thermal protection system for high-speed atmospheric entry vehicles.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Hypersonics</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Heat Transfer</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Materials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+                    <img src="public/space-debris-tracking-visualization-with-satellite.jpg" alt="Space Traffic Management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Space Traffic Management</h3>
+                        <p class="text-gray-300 text-sm mb-4">Orbital mechanics simulation for satellite constellation deployment and collision avoidance.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Orbital Mechanics</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Simulation</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Space Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Engine Design - Aerospace Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                        background: '#0f172a',
+                        foreground: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Mobile Navigation -->
+    <nav class="fixed top-0 right-0 z-50 p-4">
+        <button id="menu-toggle" class="text-white bg-primary/20 backdrop-blur-sm rounded-lg p-3 hover:bg-primary/30 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-background/95 backdrop-blur-sm">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <button id="close-menu" class="absolute top-4 right-4 text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="index.html" class="text-white hover:text-accent transition-colors">Home</a>
+                <a href="projects.html" class="text-primary hover:text-accent transition-colors">Projects</a>
+                <a href="about.html" class="text-white hover:text-accent transition-colors">About</a>
+                <a href="resume.html" class="text-white hover:text-accent transition-colors">Resume</a>
+                <a href="contact.html" class="text-white hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="pt-20 pb-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-6">
+                <a href="projects.html" class="inline-flex items-center text-primary hover:text-accent transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Back to Projects
+                </a>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary text-balance">Rocket Engine Design</h1>
+            <p class="text-xl text-gray-300 mb-8 text-pretty">High-performance liquid fuel rocket engine with optimized combustion chamber design</p>
+            
+            <img src="public/rocket-engine-test-firing-with-flames.jpg" alt="Rocket Engine Test Firing" class="w-full h-64 md:h-96 object-cover rounded-lg shadow-2xl mb-8">
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Project Overview</h2>
+                        <p class="text-gray-300 mb-4 text-pretty">
+                            This project focused on designing and analyzing a high-performance liquid fuel rocket engine 
+                            optimized for maximum thrust-to-weight ratio and combustion efficiency. The design incorporates 
+                            advanced cooling techniques and optimized nozzle geometry for superior performance.
+                        </p>
+                        <p class="text-gray-300 text-pretty">
+                            Through extensive CFD analysis and thermodynamic modeling, the engine design achieved 
+                            98.5% combustion efficiency with a specific impulse of 450 seconds, representing a 
+                            significant improvement over conventional designs.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Technical Approach</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-accent mb-2">Combustion Chamber Design</h3>
+                                <p class="text-gray-300 text-sm text-pretty">
+                                    Optimized chamber geometry using CFD analysis to ensure complete fuel mixing 
+                                    and minimize pressure losses while maintaining stable combustion.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-accent mb-2">Cooling System</h3>
+                                <p class="text-gray-300 text-sm text-pretty">
+                                    Implemented regenerative cooling system using fuel as coolant, reducing 
+                                    engine weight while improving thermal management and fuel efficiency.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-accent mb-2">Nozzle Optimization</h3>
+                                <p class="text-gray-300 text-sm text-pretty">
+                                    Designed bell-shaped nozzle with optimized expansion ratio for maximum 
+                                    thrust generation and minimal flow separation at various altitudes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Results & Impact</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-700/50 rounded-lg p-4">
+                                <h4 class="text-accent font-semibold mb-2">Performance Metrics</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• Specific Impulse: 450s</li>
+                                    <li>• Combustion Efficiency: 98.5%</li>
+                                    <li>• Thrust: 50,000 lbf</li>
+                                    <li>• Chamber Pressure: 3,000 psi</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/50 rounded-lg p-4">
+                                <h4 class="text-accent font-semibold mb-2">Achievements</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• 15% efficiency improvement</li>
+                                    <li>• 20% weight reduction</li>
+                                    <li>• Stable combustion achieved</li>
+                                    <li>• Patent application filed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-6">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Project Details</h3>
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <span class="text-accent font-semibold">Duration:</span>
+                                <span class="text-gray-300 ml-2">8 months</span>
+                            </div>
+                            <div>
+                                <span class="text-accent font-semibold">Team Size:</span>
+                                <span class="text-gray-300 ml-2">4 members</span>
+                            </div>
+                            <div>
+                                <span class="text-accent font-semibold">Role:</span>
+                                <span class="text-gray-300 ml-2">Lead Engineer</span>
+                            </div>
+                            <div>
+                                <span class="text-accent font-semibold">Status:</span>
+                                <span class="text-gray-300 ml-2">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Technologies Used</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">ANSYS Fluent</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">MATLAB</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">SolidWorks</span>
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">CFD Analysis</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded text-xs">Thermodynamics</span>
+                            <span class="bg-secondary/20 text-green-300 px-2 py-1 rounded text-xs">Heat Transfer</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Related Projects</h3>
+                        <div class="space-y-3">
+                            <a href="project-autonomous-drone-navigation.html" class="block text-gray-300 hover:text-primary transition-colors text-sm">
+                                → Autonomous Drone Navigation
+                            </a>
+                            <a href="project-hypersonic-vehicle.html" class="block text-gray-300 hover:text-primary transition-colors text-sm">
+                                → Hypersonic Vehicle Design
+                            </a>
+                            <a href="project-mars-rover-design.html" class="block text-gray-300 hover:text-primary transition-colors text-sm">
+                                → Mars Rover Design
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerospace Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                        background: '#0f172a',
+                        foreground: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Mobile Navigation -->
+    <nav class="fixed top-0 right-0 z-50 p-4">
+        <button id="menu-toggle" class="text-white bg-primary/20 backdrop-blur-sm rounded-lg p-3 hover:bg-primary/30 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-background/95 backdrop-blur-sm">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <button id="close-menu" class="absolute top-4 right-4 text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="index.html" class="text-primary hover:text-accent transition-colors">Home</a>
+                <a href="projects.html" class="text-white hover:text-accent transition-colors">Projects</a>
+                <a href="about.html" class="text-white hover:text-accent transition-colors">About</a>
+                <a href="resume.html" class="text-white hover:text-accent transition-colors">Resume</a>
+                <a href="contact.html" class="text-white hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-slate-900 to-slate-800"></div>
+        <img src="public/aerospace-engineering-rocket-launch-with-blue-sky-.jpg" alt="Aerospace Engineering" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-balance">
+                <span class="text-primary">Aerospace</span> Engineering
+                <br>
+                <span class="text-accent">Portfolio</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 text-pretty">
+                Innovative solutions for the future of flight and space exploration
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    View Projects
+                </a>
+                <a href="contact.html" class="border border-accent text-accent hover:bg-accent hover:text-background px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Projects Timeline -->
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-primary">Featured Projects</h2>
+            
+            <div class="relative">
+                <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary"></div>
+                
+                <!-- Project 1 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform" onclick="window.location.href='project-autonomous-drone-navigation.html'">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/autonomous-drone-flying-over-landscape.jpg" alt="Autonomous Drone Navigation" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Autonomous Drone Navigation</h3>
+                        <p class="text-gray-300 text-sm">Advanced flight control system with computer vision and obstacle avoidance capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/rocket-engine-test-firing-with-flames.jpg" alt="Rocket Engine Design" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Rocket Engine Design</h3>
+                        <p class="text-gray-300 text-sm">High-performance liquid fuel rocket engine with optimized combustion chamber design.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/satellite-orbiting-earth-with-space-debris.jpg" alt="Satellite Debris Tracking" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Satellite Debris Tracking</h3>
+                        <p class="text-gray-300 text-sm">Real-time space debris monitoring system using radar and optical sensors.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/wind-tunnel-testing-aircraft-model-with-airflow-vi.jpg" alt="Wind Tunnel Analysis" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Wind Tunnel Analysis</h3>
+                        <p class="text-gray-300 text-sm">Comprehensive aerodynamic testing and flow visualization for aircraft design optimization.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/mars-rover-on-red-planet-surface-with-rocky-terrai.jpg" alt="Mars Rover Design" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Mars Rover Design</h3>
+                        <p class="text-gray-300 text-sm">Autonomous planetary exploration vehicle with advanced scientific instrumentation.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/aircraft-wing-structural-analysis-with-stress-visu.jpg" alt="Aircraft Wing Analysis" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Aircraft Wing Analysis</h3>
+                        <p class="text-gray-300 text-sm">Structural optimization and stress analysis for next-generation aircraft wing design.</p>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/hypersonic-vehicle-with-glowing-heat-shield-during.jpg" alt="Hypersonic Vehicle" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Hypersonic Vehicle</h3>
+                        <p class="text-gray-300 text-sm">Advanced thermal protection system for high-speed atmospheric entry vehicles.</p>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="relative flex items-center mb-12 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-colors">
+                        <img src="public/space-debris-tracking-visualization-with-satellite.jpg" alt="Space Traffic Management" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-2">Space Traffic Management</h3>
+                        <p class="text-gray-300 text-sm">Orbital mechanics simulation for satellite constellation deployment and collision avoidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

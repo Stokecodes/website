@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aerospace Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                        background: '#0f172a',
+                        foreground: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Mobile Navigation -->
+    <nav class="fixed top-0 right-0 z-50 p-4">
+        <button id="menu-toggle" class="text-white bg-primary/20 backdrop-blur-sm rounded-lg p-3 hover:bg-primary/30 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-background/95 backdrop-blur-sm">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <button id="close-menu" class="absolute top-4 right-4 text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="index.html" class="text-white hover:text-accent transition-colors">Home</a>
+                <a href="projects.html" class="text-white hover:text-accent transition-colors">Projects</a>
+                <a href="about.html" class="text-white hover:text-accent transition-colors">About</a>
+                <a href="resume.html" class="text-primary hover:text-accent transition-colors">Resume</a>
+                <a href="contact.html" class="text-white hover:text-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="pt-20 pb-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary">Resume</h1>
+                <p class="text-xl text-gray-300 mb-6 text-pretty">Download or view my complete resume</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <button id="upload-resume" class="bg-primary hover:bg-primary/80 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Upload Resume PDF
+                    </button>
+                    <button id="download-resume" class="border border-accent text-accent hover:bg-accent hover:text-background px-6 py-3 rounded-lg font-semibold transition-colors" disabled>
+                        Download Resume
+                    </button>
+                </div>
+                
+                <input type="file" id="resume-file" accept=".pdf" class="hidden">
+            </div>
+
+            <!-- Resume Display Area -->
+            <div id="resume-container" class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 min-h-96">
+                <div id="no-resume" class="text-center py-16">
+                    <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-300 mb-2">No Resume Uploaded</h3>
+                    <p class="text-gray-400 mb-4">Upload your resume PDF to display it here</p>
+                    <button onclick="document.getElementById('upload-resume').click()" class="text-primary hover:text-accent transition-colors">
+                        Click to upload
+                    </button>
+                </div>
+                
+                <div id="resume-viewer" class="hidden">
+                    <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="800px" class="rounded-lg">
+                </div>
+            </div>
+
+            <!-- Resume Placeholder Content -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4">Quick Summary</h3>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Aerospace Engineering Student</li>
+                        <li>• GPA: 3.8/4.0</li>
+                        <li>• Expected Graduation: 2025</li>
+                        <li>• Research Experience in Autonomous Systems</li>
+                        <li>• Proficient in MATLAB, Python, CAD Design</li>
+                        <li>• Published Research in Drone Navigation</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4">Key Achievements</h3>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Dean's List (3 semesters)</li>
+                        <li>• Outstanding Student Research Award</li>
+                        <li>• AIAA Student Member</li>
+                        <li>• Completed 8 Major Projects</li>
+                        <li>• Internship at Leading Aerospace Company</li>
+                        <li>• Fluent in Multiple Programming Languages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Resume upload functionality
+        const uploadBtn = document.getElementById('upload-resume');
+        const downloadBtn = document.getElementById('download-resume');
+        const fileInput = document.getElementById('resume-file');
+        const noResume = document.getElementById('no-resume');
+        const resumeViewer = document.getElementById('resume-viewer');
+        const pdfEmbed = document.getElementById('pdf-embed');
+
+        let currentResumeFile = null;
+
+        uploadBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file && file.type === 'application/pdf') {
+                currentResumeFile = file;
+                const fileURL = URL.createObjectURL(file);
+                
+                // Show the PDF
+                pdfEmbed.src = fileURL;
+                noResume.classList.add('hidden');
+                resumeViewer.classList.remove('hidden');
+                
+                // Enable download button
+                downloadBtn.disabled = false;
+                downloadBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                
+                // Update upload button text
+                uploadBtn.textContent = 'Replace Resume PDF';
+            } else {
+                alert('Please select a valid PDF file.');
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            if (currentResumeFile) {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(currentResumeFile);
+                link.download = currentResumeFile.name;
+                link.click();
+            }
+        });
+    </script>
+</body>
+</html>
